@@ -1,4 +1,4 @@
-![snhora](https://user-images.githubusercontent.com/104692440/183762133-540ba2fc-fcdb-4c76-8c23-9c395e4341e3.png)
+![logo-jabuti-grid](https://user-images.githubusercontent.com/33287490/187043270-9d4977a2-83e2-4cb8-9179-d21f68ef7e90.png)
 
 
 # NGX-JABUTI-GRID
