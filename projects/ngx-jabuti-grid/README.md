@@ -1,24 +1,48 @@
-# NgxJabutiGrid
+![snhora](https://user-images.githubusercontent.com/104692440/183762133-540ba2fc-fcdb-4c76-8c23-9c395e4341e3.png)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Code scaffolding
+# NGX-JABUTI-GRID
 
-Run `ng generate component component-name --project ngx-jabuti-grid` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-jabuti-grid`.
-> Note: Don't forget to add `--project ngx-jabuti-grid` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
 
-Run `ng build ngx-jabuti-grid` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+<div style="display: inline_block">
+    <img align="center" alt="js" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /> 
+</div>
 
-After building your library with `ng build ngx-jabuti-grid`, go to the dist folder `cd dist/ngx-jabuti-grid` and run `npm publish`.
+## How to install
 
-## Running unit tests
+Below are ways to install the library using npm:
 
-Run `ng test ngx-jabuti-grid` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm i ngx-jabuti-grid
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How to use  properties component
+First import the module from the lib in the module you want to use it 
+```Jsx
+  imports: [
+    BrowserModule,
+    NgxJabutiGridModule
+  ],
+```
+
+```jsx
+
+```
+
+## Properties
+
+
+| Props               | type     |  Description                                   |
+| ------------------- | -------  | ---------------------------------              |
+| column              | boolean  |  column                                 |
+| row                 | boolean  |  row direction                                |
+| alignItems              | string  |  B direction                               |
+| expanded               | string  |   direction                   |
+| justify         | string   |  Element description                           |
+| lg      | string   |  Background color of tooltip                   |
+| md        | string   |  Color of tooltip                              |
+| sm            | number   |  Element that can receive input focus          |
+
