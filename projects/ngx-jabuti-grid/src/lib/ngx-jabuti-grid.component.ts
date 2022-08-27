@@ -1,20 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnChanges,  Renderer2,  ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-jabuti-grid',
+  selector: 'ngx-jabuti-grid',
   template: `
-    <p>
-      ngx-jabuti-grid works!
-    </p>
+    <section  [ngClass]="classes">
+      <ng-content></ng-content>
+   </section>
   `,
-  styles: [
-  ]
+  styleUrls: ['./Grid.module.css'],
+  encapsulation: ViewEncapsulation.None
 })
-export class NgxJabutiGridComponent implements OnInit {
+export class NgxJabutiGridComponent implements OnChanges {
+  @Input() alignItems!: string;
+	@Input() column!: boolean;
+	@Input() expanded!: string;
+	@Input() justify!: string;
+	@Input() lg!: string;
+	@Input() md!: string;
+	@Input() row!: boolean;
+	@Input() sm!: string;
 
-  constructor() { }
+	classes!: string;
 
-  ngOnInit(): void {
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
+
+  ngOnChanges(): void {
+    this.gridType();
   }
 
+  gridType(): void{
+    const styles = ClassesGrid;
+    const isRow = this.row || !this.column;
+
+		this.classes =
+			(!isRow ? styles.COLUMN  : styles.ROW) +
+
+			(isRow && this.expanded ? ` ${styles.EXPANDED }` : '') +
+			(isRow && this.justify ? ` ${styles.JUSTIFY }` : '') +
+			(isRow && this.alignItems
+				? ` ${this.renderer?.addClass(this.el.nativeElement, 'align-' + this.alignItems)}`
+				: '' +
+
+				  (!isRow && this.sm
+						? ` ${this.renderer.addClass(this.el.nativeElement, 'sm-' + this.sm)}`
+						: '') +
+				  (!isRow && this.md
+						? ` ${this.renderer.addClass(this.el.nativeElement, 'md-' + this.md)}`
+						: '') +
+				  (!isRow && this.lg
+						? `${this.renderer.addClass(this.el.nativeElement, 'lg-' + this.lg)}`
+						: ''));
+  }
+}
+
+enum ClassesGrid {
+  COLUMN = 'column',
+  ROW = 'row',
+  EXPANDED = 'expanded',
+  JUSTIFY = 'justify'
 }

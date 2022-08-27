@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxJabutiGridComponent } from './ngx-jabuti-grid.component';
 
@@ -8,6 +9,7 @@ import { NgxJabutiGridComponent } from './ngx-jabuti-grid.component';
     NgxJabutiGridComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     NgxJabutiGridComponent
