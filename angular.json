@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-jabuti-grid": {
+      "projectType": "library",
+      "root": "projects/ngx-jabuti-grid",
+      "sourceRoot": "projects/ngx-jabuti-grid/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-jabuti-grid/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-jabuti-grid/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-jabuti-grid/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-jabuti-grid/src/test.ts",
+            "tsConfig": "projects/ngx-jabuti-grid/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-jabuti-grid/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-jabuti-grid"
 }

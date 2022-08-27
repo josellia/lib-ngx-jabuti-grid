@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-jabuti-grid": [
+        "dist/ngx-jabuti-grid/ngx-jabuti-grid",
+        "dist/ngx-jabuti-grid"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
