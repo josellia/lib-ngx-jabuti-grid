@@ -39,9 +39,7 @@ First import the module from the lib in the module you want to use it
 | ------------------- | -------  | ---------------------------------              |
 | column              | boolean  |  column                                 |
 | row                 | boolean  |  row direction                                |
-| alignItems              | string  |  B direction                               |
 | expanded               | string  |   direction                   |
-| justify         | string   |  Element description                           |
 | lg      | string   |  Background color of tooltip                   |
 | md        | string   |  Color of tooltip                              |
 | sm            | number   |  Element that can receive input focus          |

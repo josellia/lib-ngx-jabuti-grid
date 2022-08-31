@@ -11,16 +11,17 @@ import { Component, ElementRef, Input, OnChanges,  Renderer2,  ViewEncapsulation
   encapsulation: ViewEncapsulation.None
 })
 export class NgxJabutiGridComponent implements OnChanges {
-  @Input() alignItems!: string;
 	@Input() column!: boolean;
 	@Input() expanded!: string;
-	@Input() justify!: string;
+
 	@Input() lg!: string;
 	@Input() md!: string;
 	@Input() row!: boolean;
 	@Input() sm!: string;
 
 	classes!: string;
+  alignItems!: string;
+  justify!: string;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
@@ -38,7 +39,7 @@ export class NgxJabutiGridComponent implements OnChanges {
 			(isRow && this.expanded ? ` ${styles.EXPANDED }` : '') +
 			(isRow && this.justify ? ` ${styles.JUSTIFY }` : '') +
 			(isRow && this.alignItems
-				? ` ${this.renderer?.addClass(this.el.nativeElement, 'align-' + this.alignItems)}`
+				? ` ${this.renderer.addClass(this.el.nativeElement, 'align-' + this.alignItems)}`
 				: '' +
 
 				  (!isRow && this.sm
