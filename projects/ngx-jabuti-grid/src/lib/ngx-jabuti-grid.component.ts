@@ -13,7 +13,6 @@ import { Component, ElementRef, Input, OnChanges,  Renderer2,  ViewEncapsulation
 export class NgxJabutiGridComponent implements OnChanges {
 	@Input() column!: boolean;
 	@Input() expanded!: string;
-
 	@Input() lg!: string;
 	@Input() md!: string;
 	@Input() row!: boolean;
