@@ -91,11 +91,14 @@ describe(NgxJabutiGridComponent.name, () => {
   });
 
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should sm when add class is sm-`, () => {
-    component.sm = 'sm-1';
-    spyOn(renderer, 'addClass');
+    component.sm = 'sm-';
+    component.row = false;
+    component.column = true;
+
+    spyOn(renderer, 'addClass').and.callThrough();
     fixture.detectChanges();
     component.gridType();
 
-    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), 'sm');;
+    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
   });
 });
