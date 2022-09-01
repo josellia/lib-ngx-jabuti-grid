@@ -35,12 +35,12 @@ First import the module from the lib in the module you want to use it
 ## Properties
 
 
-| Props               | type     |  Description                                   |
-| ------------------- | -------  | ---------------------------------              |
-| column              | boolean  |  column                                 |
-| row                 | boolean  |  row direction                                |
-| expanded               | string  |   direction                   |
-| lg      | string   |  Background color of tooltip                   |
-| md        | string   |  Color of tooltip                              |
-| sm            | number   |  Element that can receive input focus          |
+| Props               | type     |  Description                       |
+| ------------------- | -------  | ---------------------------------  |
+| column              | boolean  |  column                            |
+| row                 | boolean  |  row direction                     |
+| expanded            | string   |  for maximum width none                        |
+| lg                  | string   |  for screens higher than 1200px    |
+| md                  | string   |  for screens higher than 970px     |
+| sm                  | number   |  for screens higher than 768px     |
 
