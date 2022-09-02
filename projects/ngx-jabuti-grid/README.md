@@ -3,9 +3,10 @@
 
 # NGX-JABUTI-GRID
 
+![npm](https://img.shields.io/npm/v/ngx-jabuti-grid)
+![NPM](https://img.shields.io/npm/l/ngx-jabuti-grid)
 
 <div style="display: inline_block">
-![npm](https://img.shields.io/npm/v/ngx-jabuti-grid)
     <img align="center" alt="js" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /> 
 </div>
 
