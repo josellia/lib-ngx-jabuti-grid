@@ -1,6 +1,21 @@
 {
   "name": "ngx-jabuti-grid",
   "version": "0.0.0",
+  "description": "Component to create CSS grid layout",
+  "author": "Josélia Pires",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josellia/lib-ngx-jabuti-grid/tree/master/projects/ngx-jabuti-grid"
+  },
+  "keywords": [
+    "Angular",
+    "Component",
+    "Library",
+    "Grid",
+    "Layout"
+
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
