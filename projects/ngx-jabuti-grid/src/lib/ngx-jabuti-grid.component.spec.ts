@@ -1,4 +1,4 @@
-import { ElementRef, Renderer2, Type } from '@angular/core';
+import {  Renderer2} from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxJabutiGridComponent } from './ngx-jabuti-grid.component';
@@ -11,17 +11,13 @@ class MockRenderer {
 describe(NgxJabutiGridComponent.name, () => {
   let component: NgxJabutiGridComponent;
   let fixture: ComponentFixture<NgxJabutiGridComponent>;
-  let renderer2: Renderer2;
-  let elementRef: ElementRef;
-
   let renderer: MockRenderer;
-
 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ NgxJabutiGridComponent ],
-      //providers: [Renderer2]
+
       providers: [{
         provide: Renderer2,
         useClass: MockRenderer
@@ -32,15 +28,26 @@ describe(NgxJabutiGridComponent.name, () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NgxJabutiGridComponent);
-    elementRef = fixture.componentRef.injector.get(ElementRef);
-    //renderer2 = fixture.componentRef.injector.get<Renderer2>(Renderer2 as Type<Renderer2>);
     renderer =  fixture.debugElement.injector.get(Renderer2);
+
+    spyOn(renderer, 'addClass').and.callThrough();
+
     component = fixture.componentInstance;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`#${NgxJabutiGridComponent.prototype.ngOnChanges.name} Should ngOnChanges when call gridType`, () => {
+    spyOn(component, 'gridType');
+
+    fixture.detectChanges();
+    component.ngOnChanges();
+
+    expect(component.gridType).toHaveBeenCalled();
+  });
+
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should row when (@Input column) is true`, () => {
     component.row = true;
     fixture.detectChanges();
@@ -83,19 +90,37 @@ describe(NgxJabutiGridComponent.name, () => {
 
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should alignItems when add class align-center`, () => {
     component.alignItems = 'center';
-    spyOn(renderer, 'addClass').and.callThrough();
+
     fixture.detectChanges();
     component.gridType();
 
     expect(renderer.addClass).toHaveBeenCalledWith(jasmine.any(Object), 'align-center');
   });
 
-  it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should sm when add class is sm-`, () => {
+  it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should sm when add class is sm-1`, () => {
     component.sm = 'sm-';
-    component.row = false;
     component.column = true;
 
-    spyOn(renderer, 'addClass').and.callThrough();
+    fixture.detectChanges();
+    component.gridType();
+
+    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
+  });
+
+  it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should md when add class is md-1`, () => {
+    component.md = 'md-';
+    component.column = true;
+
+    fixture.detectChanges();
+    component.gridType();
+
+    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
+  });
+
+  it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should lg when add class is lg-1`, () => {
+    component.lg = 'lg-';
+    component.column = true;
+
     fixture.detectChanges();
     component.gridType();
 
