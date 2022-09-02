@@ -4,8 +4,6 @@
 # NGX-JABUTI-GRID
 
 
-
-
 <div style="display: inline_block">
     <img align="center" alt="js" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" /> 
 </div>
@@ -30,6 +28,49 @@ First import the module from the lib in the module you want to use it
 
 ```jsx
 
+<h3>Jabuti grid one</h3>
+<ngx-jabuti-grid [row]="true">
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column1</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column2</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column3</h1>
+  </ngx-jabuti-grid>
+
+</ngx-jabuti-grid>
+<hr>
+<h3>Jabuti grid two</h3>
+<ngx-jabuti-grid expanded="row expanded">
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column1</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column2</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="4">
+    <h1>Column3</h1>
+  </ngx-jabuti-grid>
+
+</ngx-jabuti-grid>
+<hr>
+<h3>Jabuti grid three</h3>
+
+<ngx-jabuti-grid [row]="true">
+  <ngx-jabuti-grid [column]="true" sm="12" md="2">
+    <h1>Column1</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="2">
+    <h1>Column2</h1>
+  </ngx-jabuti-grid>
+  <ngx-jabuti-grid [column]="true" sm="12" md="2">
+    <h1>Column3</h1>
+  </ngx-jabuti-grid>
+
+</ngx-jabuti-grid>
+
 ```
 
 ## Properties
@@ -37,9 +78,9 @@ First import the module from the lib in the module you want to use it
 
 | Props               | type     |  Description                       |
 | ------------------- | -------  | ---------------------------------  |
-| column              | boolean  |  column                            |
+| column              | boolean  |  column  direction                 |
 | row                 | boolean  |  row direction                     |
-| expanded            | string   |  for maximum width none                        |
+| expanded            | string   |  for maximum width none            |
 | lg                  | string   |  for screens higher than 1200px    |
 | md                  | string   |  for screens higher than 970px     |
 | sm                  | number   |  for screens higher than 768px     |
