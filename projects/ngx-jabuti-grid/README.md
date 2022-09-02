@@ -72,7 +72,7 @@ First import the module from the lib in the module you want to use it
 </ngx-jabuti-grid>
 
 ```
-
+## Result
 ## Properties
 
 
