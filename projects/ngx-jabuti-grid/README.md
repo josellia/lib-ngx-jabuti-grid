@@ -77,6 +77,10 @@ First import the module from the lib in the module you want to use it
 ## Result
 ![grid](https://user-images.githubusercontent.com/33287490/188235964-d52e674d-f474-41f7-8905-e6410c42fd36.PNG)
 
+
+## Grid options
+<span> of columns - 12</span>
+
 ## Properties
 
 
@@ -88,4 +92,5 @@ First import the module from the lib in the module you want to use it
 | lg                  | string   |  for screens higher than 1200px    |
 | md                  | string   |  for screens higher than 970px     |
 | sm                  | number   |  for screens higher than 768px     |
+
 
