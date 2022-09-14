@@ -98,32 +98,32 @@ describe(NgxJabutiGridComponent.name, () => {
   });
 
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should sm when add class is sm-1`, () => {
-    component.sm = 'sm-';
+    component.sm = '1';
     component.column = true;
 
     fixture.detectChanges();
     component.gridType();
 
-    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
+    expect(renderer.addClass).toHaveBeenCalledWith(jasmine.any(Object), 'sm-1');;
   });
 
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should md when add class is md-1`, () => {
-    component.md = 'md-';
+    component.md = '1';
     component.column = true;
 
     fixture.detectChanges();
     component.gridType();
 
-    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
+    expect(renderer.addClass).toHaveBeenCalledWith(jasmine.any(Object), 'md-1');;
   });
 
   it(`#${NgxJabutiGridComponent.prototype.gridType.name} Should lg when add class is lg-1`, () => {
-    component.lg = 'lg-';
+    component.lg = '1';
     component.column = true;
 
     fixture.detectChanges();
     component.gridType();
 
-    expect(renderer.addClass).not.toHaveBeenCalledWith(jasmine.any(Object), '1');;
+    expect(renderer.addClass).toHaveBeenCalledWith(jasmine.any(Object), 'lg-1');;
   });
 });
