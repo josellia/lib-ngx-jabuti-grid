@@ -25,7 +25,7 @@
     "test-covarage": "ng test --watch=false --sourceMap=true --codeCoverage=true --browsers ChromeHeadless"
 
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/common": "~13.3.0",
